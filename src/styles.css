@@ -36,6 +36,10 @@ body {
   overflow-x: hidden;
 }
 
+main {
+  background: #f3f3f3;
+}
+
 button {
   font: inherit;
 }
@@ -136,8 +140,12 @@ button {
 }
 
 .about {
+  width: 570px;
   min-height: 882px;
+  margin: 0 auto;
   padding-top: 60px;
+  border-radius: 0 0 30px 30px;
+  background: #fff;
   overflow: hidden;
 }
 
@@ -189,17 +197,33 @@ button {
 .photo-rail {
   display: flex;
   gap: 20px;
-  width: calc(100vw - max(15px, (100vw - 540px) / 2));
-  margin: 10px 0 0;
-  margin-left: max(15px, calc((100vw - 540px) / 2));
+  width: 540px;
+  margin: 10px auto 0;
+  padding-bottom: 10px;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
   scroll-snap-type: x proximity;
-  scrollbar-width: none;
+  scrollbar-color: var(--pink) transparent;
+  scrollbar-width: thin;
 }
 
 .photo-rail::-webkit-scrollbar {
+  height: 7px;
+}
+
+.photo-rail::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.photo-rail::-webkit-scrollbar-button {
   display: none;
+  width: 0;
+  height: 0;
+}
+
+.photo-rail::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--pink);
 }
 
 .photo-rail img {
@@ -233,6 +257,7 @@ button {
 .media {
   min-height: 901px;
   padding-top: 60px;
+  background: #fff;
 }
 
 .media-card {
@@ -333,6 +358,7 @@ button {
 
   .about,
   .media {
+    width: 100%;
     min-height: auto;
     padding: 55px 20px;
   }
@@ -361,6 +387,11 @@ button {
     width: calc(100% + 40px);
     margin-left: -20px;
     padding-left: 20px;
+    scrollbar-width: none;
+  }
+
+  .photo-rail::-webkit-scrollbar {
+    display: none;
   }
 
   .photo-rail img {
