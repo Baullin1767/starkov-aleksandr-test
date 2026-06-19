@@ -140,13 +140,8 @@ button {
 }
 
 .about {
-  width: 570px;
   min-height: 882px;
-  margin: 0 auto;
   padding-top: 60px;
-  border-radius: 0 0 30px 30px;
-  background: #fff;
-  overflow: hidden;
 }
 
 .section-copy {
@@ -175,7 +170,16 @@ button {
 
 .achievements {
   width: 540px;
-  margin: 20px auto 10px;
+  margin: 0 auto 10px;
+}
+
+.about-card {
+  width: 570px;
+  margin: 20px auto 0;
+  padding: 15px 0 20px;
+  border-radius: 30px;
+  background: #fff;
+  overflow: hidden;
 }
 
 .achievement {
@@ -257,7 +261,6 @@ button {
 .media {
   min-height: 901px;
   padding-top: 60px;
-  background: #fff;
 }
 
 .media-card {
@@ -273,6 +276,7 @@ button {
   font-size: 18px;
   font-weight: 500;
   line-height: 1.2;
+  text-align: center;
 }
 
 .media-grid {
@@ -358,12 +362,12 @@ button {
 
   .about,
   .media {
-    width: 100%;
     min-height: auto;
     padding: 55px 20px;
   }
 
   .section-copy,
+  .about-card,
   .media-card,
   .pink-button--wide {
     width: 100%;

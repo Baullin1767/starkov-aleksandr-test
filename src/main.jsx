@@ -88,24 +88,26 @@ function About() {
         </p>
       </div>
 
-      <div className="achievements">
-        {achievements.map((item) => (
-          <div className="achievement" key={item}>
-            <img src={`${assets}/check.png`} alt="" aria-hidden="true" />
-            <span>{item}</span>
-          </div>
-        ))}
-      </div>
+      <div className="about-card">
+        <div className="achievements">
+          {achievements.map((item) => (
+            <div className="achievement" key={item}>
+              <img src={`${assets}/check.png`} alt="" aria-hidden="true" />
+              <span>{item}</span>
+            </div>
+          ))}
+        </div>
 
-      <div className="photo-rail" ref={railRef} aria-label="Фотографии Кати Усмановой">
-        {aboutPhotos.map((photo, index) => (
-          <img key={photo} src={photo} alt={`Катя Усманова — фото ${index + 1}`} />
-        ))}
+        <div className="photo-rail" ref={railRef} aria-label="Фотографии Кати Усмановой">
+          {aboutPhotos.map((photo, index) => (
+            <img key={photo} src={photo} alt={`Катя Усманова — фото ${index + 1}`} />
+          ))}
+        </div>
+        <button className="rail-hint" type="button" onClick={slideNext}>
+          Листайте вправо
+          <img src={`${assets}/arrow.png`} alt="" aria-hidden="true" />
+        </button>
       </div>
-      <button className="rail-hint" type="button" onClick={slideNext}>
-        Листайте вправо
-        <img src={`${assets}/arrow.png`} alt="" aria-hidden="true" />
-      </button>
     </section>
   );
 }
